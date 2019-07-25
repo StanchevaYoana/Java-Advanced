@@ -6,28 +6,28 @@ public class BalancedParentheses {
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
-        ArrayDeque <String> stack = new ArrayDeque<>();
+        ArrayDeque<Character> stack = new ArrayDeque<>();
 
         for (int i = 0; i < input.length() ; i++) {
             char symbol = input.charAt(i);
             if (stack.isEmpty()){
-                stack.push(String.valueOf(symbol));
+                stack.push(symbol);
             } else {
                 boolean isEqual = false;
                 switch (stack.peek()){
-                    case "(":
+                    case '(':
                         if (symbol == ')'){
                             stack.pop();
                             isEqual = true;
                         }
                         break;
-                    case "{":
+                    case '{':
                         if (symbol == '}'){
                             stack.pop();
                             isEqual = true;
                         }
                         break;
-                    case "[":
+                    case '[':
                         if (symbol == ']'){
                             stack.pop();
                             isEqual = true;
@@ -35,7 +35,7 @@ public class BalancedParentheses {
                         break;
                 }
                 if (!isEqual){
-                    stack.push(String.valueOf(symbol));
+                    stack.push(symbol);
                 }
             }
         }
