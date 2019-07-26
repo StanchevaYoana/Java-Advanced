@@ -1,45 +1,65 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class InfixToPostfix {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+        List<String> input = Arrays.stream(scanner.nextLine()
+                .split(" ")).collect(Collectors.toList());
 
-        ArrayDeque<String> numbers = new ArrayDeque<>(); // queue
-        ArrayDeque<String> operators = new ArrayDeque<>();//stack
+        String postfix = inf2postFix(input.toString());
+        List<String> output = new ArrayList<>();
+        for (int i = 0; i < postfix.length(); i++) {
+            output.add(String.valueOf(postfix.charAt(i)));
+        }
+        output.forEach(element -> {
+            if (!element.equals(" ") && !element.equals(",")) {
+                System.out.print(element + " ");
+            }
+        });
+    }
 
-        String[] input = scanner.nextLine().split(" ");
-        String operatorBetweenBrackets = "";
-        boolean openBrackets = false;
+    private static String inf2postFix(String infix) {
 
-        for (String n : input) {
-            char symbol = n.charAt(0);
-            if (Character.isDigit(symbol) || Character.isAlphabetic(symbol)) {
-                numbers.offer(n);
-            } else if (symbol == '+' || symbol == '-'){
-                if (!operators.isEmpty() && operators.peek().equals(String.valueOf(symbol))) {
-                    numbers.offer(operators.peek());
-                } else if (openBrackets) {
-                    operatorBetweenBrackets = String.valueOf(symbol);
-                } else {
-                    operators.push(String.valueOf(symbol));
-                }
-            } else if (symbol == '*' || symbol == '/') {
-                if (operators.contains("*")|| operators.contains("/")) {
+        StringBuilder postfix = new StringBuilder();
+        ArrayDeque<Character> operator = new ArrayDeque<>();
+        char popped;
 
-                } else if (openBrackets) {
-                    operatorBetweenBrackets = String.valueOf(symbol);
-                } else {
-                    operators.push(String.valueOf(symbol));
-                }
-            }else if (symbol == '(') {
-                openBrackets = true;
-            } else if (symbol == ')') {
-                openBrackets = false;
-                numbers.offer(operatorBetweenBrackets);
+        for (int i = 1; i < infix.length() - 1; i++) {
+
+            char get = infix.charAt(i);
+
+            if (!isOperator(get))
+                postfix.append(get);
+
+            else if (get == ')')
+                while ((popped = operator.pop()) != '(')
+                    postfix.append(popped);
+
+            else {
+                while (!operator.isEmpty() && get != '(' && precedence(operator.peek()) >= precedence(get))
+                    postfix.append(operator.pop());
+
+                operator.push(get);
             }
         }
-        numbers.forEach(element -> System.out.print(element + " "));
-        operators.forEach(element -> System.out.print(element + " "));
+        while (!operator.isEmpty())
+            postfix.append(operator.pop());
+
+        return postfix.toString();
+    }
+
+    private static boolean isOperator(char i) {
+        return precedence(i) > 0;
+    }
+
+    private static int precedence(char i) {
+
+        if (i == '(' || i == ')') return 1;
+        else if (i == '-' || i == '+') return 2;
+        else if (i == '*' || i == '/') return 3;
+        else return 0;
     }
 }
 
