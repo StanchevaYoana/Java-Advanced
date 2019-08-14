@@ -35,7 +35,6 @@ public class SrubskoUnleashed {
             value.entrySet().stream().sorted((artist1, artist2) -> {
                 return artist2.getValue().compareTo(artist1.getValue());
             }).forEach(key -> System.out.println(String.format("#  %s -> %d", key.getKey(), key.getValue())));
-
         });
     }
 }
