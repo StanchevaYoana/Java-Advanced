@@ -1,5 +1,4 @@
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -7,7 +6,7 @@ public class CopyBytes {
     public static void main(String[] args) {
 
         String pathIn = System.getProperty("user.dir") + "/res/input.txt";
-        String pathOut = System.getProperty("user.dir") + "/res/output2.txt";
+        String pathOut = System.getProperty("user.dir") + "/res/03.CopyBytesOutput.txt";
 
         try (FileInputStream fis = new FileInputStream(pathIn);
              FileOutputStream fos = new FileOutputStream(pathOut)) {

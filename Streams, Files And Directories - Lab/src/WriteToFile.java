@@ -7,7 +7,7 @@ public class WriteToFile {
     public static void main(String[] args) {
 
         String pathIn = System.getProperty("user.dir") + "/res/input.txt";
-        String pathOut = System.getProperty("user.dir") + "/res/output.txt";
+        String pathOut = System.getProperty("user.dir") + "/res/02.WriteToFileOutput.txt";
 
         try (FileInputStream fis = new FileInputStream(pathIn);
              FileOutputStream fos = new FileOutputStream(pathOut)) {
