@@ -9,7 +9,7 @@ public class KnightsOfHonor {
 
         BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 
-        Consumer<String> consumer = t -> System.out.println(String.format("Sir %s", t));
+        Consumer<String> consumer = t -> System.out.println("Sir " + t);
 
         Arrays.stream(read.readLine().split("\\s+")).forEach(consumer);
     }
