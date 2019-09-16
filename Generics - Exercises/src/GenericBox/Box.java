@@ -3,12 +3,12 @@ package GenericBox;
 public class Box <T>{
    private T element;
 
-  public void setElement(T input){
+  public Box(T input){
         this.element = input;
     }
 
     @Override
     public String toString() {
-        return String.format("java.lang.String: %s",element );
+        return this.element.getClass().getName() + ": " + this.element;
     }
 }

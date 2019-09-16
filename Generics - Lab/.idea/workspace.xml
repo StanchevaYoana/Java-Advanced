@@ -7,10 +7,6 @@
     <list default="true" id="60fbdaac-6c7b-4e11-8089-1c9e81f3bf6d" name="Default Changelist" comment="List utilities .">
       <change afterPath="$PROJECT_DIR$/../Defining Classes - Exercises/src/FamilyTree/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Defining Classes - Exercises/src/FamilyTree/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Generics - Exercises/Generics - Exercises.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Generics - Exercises/src/GenericBox/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Generics - Exercises/src/GenericBox/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$. Java-Advanced-Generics-Lab.docx" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -281,7 +277,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
