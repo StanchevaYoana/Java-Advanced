@@ -21,7 +21,7 @@ public class Main {
     public static <T extends Comparable<T>> int countGreaterElement(List<Box<T>> listOfBoxes,Box<T> comparator) {
         int count = 0;
         for (Box<T> t : listOfBoxes) {
-            if (t.element.compareTo(comparator.element) > 0) {
+            if (t.getElement().compareTo(comparator.getElement()) > 0) {
                 count++;
             }
         }
