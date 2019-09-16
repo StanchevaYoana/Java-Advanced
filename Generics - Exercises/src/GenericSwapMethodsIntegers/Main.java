@@ -26,11 +26,10 @@ public class Main {
         list.forEach(e -> System.out.println(e.toString()));
     }
 
-    private static void swapIndexesInArray(List<Box<Integer>> list, int firstIndex, int secondIndex) {
+    private static <T> void swapIndexesInArray(List<T> list, int firstIndex, int secondIndex) {
 
-        list.add(list.get(firstIndex));
+        T holder = list.get (firstIndex);
         list.set(firstIndex, list.get(secondIndex));
-        list.set(secondIndex, list.get(list.size() - 1));
-        list.remove(list.size() - 1);
+        list.set(secondIndex, holder);
     }
 }

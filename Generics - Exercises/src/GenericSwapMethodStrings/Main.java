@@ -12,7 +12,6 @@ public class Main {
         List<Box> list = new ArrayList<>();
         while (n-- > 0) {
             Box<String> box = new Box<>(scanner.nextLine());
-
             list.add(box);
 
         }
@@ -25,11 +24,9 @@ public class Main {
         list.forEach(e -> System.out.println(e.toString()));
     }
 
-    private static void swapIndexes(List<Box> list, int firstIndex, int secondIndex) {
-
-        list.add(list.get(firstIndex));
+    private static <T> void swapIndexes(List<T> list, int firstIndex, int secondIndex) {
+        T holder = list.get(firstIndex);
         list.set(firstIndex, list.get(secondIndex));
-        list.set(secondIndex, list.get(list.size() - 1));
-        list.remove(list.size() - 1);
+        list.set(secondIndex, holder);
     }
 }
