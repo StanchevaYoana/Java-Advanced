@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f10d74-2e5d-428f-a2a0-08bec30a01c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/Froggy/Lake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/Froggy/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/ComparingObjects/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/ComparingObjects/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
