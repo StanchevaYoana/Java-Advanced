@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f10d74-2e5d-428f-a2a0-08bec30a01c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/Collection/ListyIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/Collection/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/StackIterator/CustomStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Iterators and Comparators - Exercises/src/StackIterator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -210,30 +211,6 @@
               <item name="Iterators and Comparators - Lab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Iterators and Comparators - Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Iterators and Comparators - Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Book" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Iterators and Comparators - Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Iterators and Comparators - Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="BookComparator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Iterators and Comparators - Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Iterators and Comparators - Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ComparableBook" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Iterators and Comparators - Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Iterators and Comparators - Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Library" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -326,7 +303,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568711999648</updated>
       <workItem from="1568712003125" duration="7690000" />
-      <workItem from="1568790353694" duration="6791000" />
+      <workItem from="1568790353694" duration="7596000" />
     </task>
     <task id="LOCAL-00001" summary="Add task - Book .">
       <created>1568713751377</created>
@@ -360,7 +337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14481000" />
+    <option name="totallyTimeSpent" value="15286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
