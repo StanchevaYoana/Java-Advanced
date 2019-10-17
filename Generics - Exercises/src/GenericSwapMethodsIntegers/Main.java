@@ -9,27 +9,31 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         int n = Integer.parseInt(scanner.nextLine());
 
-        List<Box<Integer>> list = new ArrayList<>();
+        List<Box<Integer>> boxes = new ArrayList<>();
 
         while (n-- > 0) {
+            String str = scanner.nextLine();
 
-            Box<Integer> box = new Box<>(Integer.parseInt(scanner.nextLine()));
-            list.add(box);
+            Box<Integer> box = new Box<>(Integer.parseInt(str));
+            boxes.add(box);
         }
 
-        int [] indexes = Arrays.stream(scanner.nextLine().split("\\s+"))
-                .mapToInt(Integer::parseInt).toArray();
+        int firstIndex = scanner.nextInt();
+        int secondIndex = scanner.nextInt();
 
-        swapIndexesInArray(list, indexes[0], indexes[1]);
-        list.forEach(e -> System.out.println(e.toString()));
+        swapElements(boxes, firstIndex, secondIndex);
+
+        for (Box<Integer> box : boxes) {
+            System.out.println(box.toString());
+        }
     }
 
-    private static <T> void swapIndexesInArray(List<T> list, int firstIndex, int secondIndex) {
-
-        T holder = list.get (firstIndex);
-        list.set(firstIndex, list.get(secondIndex));
-        list.set(secondIndex, holder);
+    private static <T> void swapElements(List<Box<T>> boxes, int firstIndex, int secondIndex) {
+        Box<T> temp = boxes.get(firstIndex);
+        boxes.set(firstIndex,boxes.get(secondIndex));
+        boxes.set(secondIndex,temp);
     }
 }
